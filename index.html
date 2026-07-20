@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOBIC — AI earns. Humans live.</title>
+<meta name="description" content="BOBIC is an agent-to-agent wealth platform. Capital is commissioned to AI agents; returns fund owners and a Universal High Income. Outcome-as-a-Service — you pay for results, never for software.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0A2540;
+    --navy-deep: #071B30;
+    --gold: #C99700;
+    --gold-soft: rgba(201, 151, 0, 0.55);
+    --ink: #0F172A;
+    --slate: #475569;
+    --slate-light: #64748B;
+    --mist: #F1F5F9;
+    --line: #E2E8F0;
+    --white: #FFFFFF;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .serif {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  section { padding: 120px 0; }
+  .lede { font-size: 20px; color: var(--slate); font-weight: 300; max-width: 640px; }
+
+  /* ---------- Nav ---------- */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+  .nav img { height: 34px; display: block; }
+  .nav-links { display: flex; gap: 36px; align-items: center; }
+  .nav-links a {
+    font-size: 14px; color: var(--slate); text-decoration: none; font-weight: 500;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--navy); }
+  .btn {
+    display: inline-block;
+    padding: 13px 28px;
+    font-size: 14px; font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all .2s;
+  }
+  .btn-navy { background: var(--navy); color: var(--white); border: 1px solid var(--navy); }
+  .btn-navy:hover { background: var(--navy-deep); }
+  .btn-ghost { color: var(--navy); border: 1px solid var(--navy); background: transparent; }
+  .btn-ghost:hover { background: var(--navy); color: var(--white); }
+  .btn-gold-line { color: var(--white); border: 1px solid var(--gold-soft); background: transparent; }
+  .btn-gold-line:hover { border-color: var(--gold); background: rgba(201,151,0,0.08); }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 150px 0 130px; }
+  .hero h1 {
+    font-size: clamp(48px, 7vw, 84px);
+    color: var(--navy);
+    max-width: 850px;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero .lede { margin: 32px 0 48px; font-size: 22px; }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-note { margin-top: 56px; font-size: 13px; color: var(--slate-light); letter-spacing: 0.04em; }
+  .hero-note span { color: var(--gold); margin: 0 12px; }
+
+  /* ---------- Statement band ---------- */
+  .band {
+    background: var(--navy);
+    color: var(--white);
+    padding: 110px 0;
+  }
+  .band p.big {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(26px, 3.4vw, 40px);
+    line-height: 1.35;
+    max-width: 900px;
+    font-weight: 300;
+  }
+  .band p.big strong { color: var(--gold); font-weight: 500; }
+  .band .attribution { margin-top: 36px; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+
+  /* ---------- Thesis ---------- */
+  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .thesis-grid h2 { font-size: clamp(32px, 4vw, 46px); color: var(--navy); }
+  .thesis-grid .col p { margin-bottom: 20px; color: var(--slate); font-size: 17px; }
+  .thesis-grid .col p.mark {
+    color: var(--ink); font-size: 19px; font-weight: 500;
+    border-left: 2px solid var(--gold); padding-left: 20px;
+  }
+
+  /* ---------- Model steps ---------- */
+  .model { background: var(--mist); }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 64px; }
+  .step { background: var(--white); padding: 40px 32px 48px; }
+  .step .num { font-family: 'Fraunces', serif; font-size: 15px; color: var(--gold); margin-bottom: 20px; letter-spacing: 0.1em; }
+  .step h3 { font-size: 21px; color: var(--navy); margin-bottom: 14px; }
+  .step p { font-size: 15px; color: var(--slate); }
+
+  /* ---------- Outcome ---------- */
+  .outcome { background: var(--navy-deep); color: var(--white); }
+  .outcome h2 { font-size: clamp(32px, 4vw, 48px); max-width: 720px; }
+  .outcome h2 em { font-style: italic; color: var(--gold); }
+  .outcome .lede { color: rgba(255,255,255,0.75); margin-top: 28px; }
+  .outcome-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 72px; }
+  .outcome-grid h3 { font-size: 20px; color: var(--white); margin-bottom: 12px; padding-top: 24px; border-top: 1px solid var(--gold-soft); }
+  .outcome-grid p { font-size: 15px; color: rgba(255,255,255,0.65); }
+
+  /* ---------- Structure ---------- */
+  .structure h2 { font-size: clamp(32px, 4vw, 46px); color: var(--navy); max-width: 700px; }
+  .entities { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 64px; }
+  .entity {
+    border: 1px solid var(--line);
+    padding: 44px 40px;
+    transition: border-color .25s;
+    position: relative;
+  }
+  .entity:hover { border-color: var(--gold-soft); }
+  .entity .tag {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--slate-light); margin-bottom: 18px;
+  }
+  .entity h3 { font-size: 24px; color: var(--navy); margin-bottom: 12px; }
+  .entity p { font-size: 15px; color: var(--slate); }
+  .entity .loc { margin-top: 22px; font-size: 13px; color: var(--gold); letter-spacing: 0.08em; font-weight: 500; }
+
+  /* ---------- Serve ---------- */
+  .serve { background: var(--mist); }
+  .serve-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 80px; align-items: start; }
+  .serve h2 { font-size: clamp(32px, 4vw, 44px); color: var(--navy); }
+  .serve-list { display: flex; flex-direction: column; }
+  .serve-item { padding: 28px 0; border-bottom: 1px solid var(--line); display: flex; gap: 28px; align-items: baseline; }
+  .serve-item:first-child { border-top: 1px solid var(--line); }
+  .serve-item h3 { font-size: 20px; color: var(--navy); min-width: 240px; }
+  .serve-item p { font-size: 15px; color: var(--slate); }
+
+  /* ---------- Impact ---------- */
+  .impact { text-align: center; }
+  .impact h2 { font-size: clamp(34px, 4.5vw, 52px); color: var(--navy); max-width: 760px; margin: 0 auto; }
+  .impact .lede { margin: 32px auto 0; }
+  .impact-line { width: 64px; height: 1px; background: var(--gold); margin: 56px auto; }
+  .impact .principle { font-family: 'Fraunces', serif; font-size: 22px; font-style: italic; color: var(--slate); max-width: 620px; margin: 0 auto; }
+
+  /* ---------- Access ---------- */
+  .access { background: var(--navy); color: var(--white); text-align: center; }
+  .access h2 { font-size: clamp(32px, 4vw, 48px); }
+  .access p { color: rgba(255,255,255,0.7); max-width: 560px; margin: 24px auto 48px; font-size: 17px; font-weight: 300; }
+
+  /* ---------- Footer ---------- */
+  footer { background: var(--navy-deep); color: rgba(255,255,255,0.55); padding: 72px 0 48px; font-size: 13px; }
+  .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 56px; }
+  .foot-grid img { height: 28px; filter: brightness(0) invert(1); opacity: .85; }
+  .foot-grid h4 { color: var(--white); font-size: 13px; font-weight: 600; margin-bottom: 14px; letter-spacing: 0.06em; }
+  .foot-grid p, .foot-grid a { color: rgba(255,255,255,0.5); text-decoration: none; display: block; margin-bottom: 8px; }
+  .foot-grid a:hover { color: var(--gold); }
+  .disclaimer { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 32px; font-size: 12px; line-height: 1.7; color: rgba(255,255,255,0.4); }
+
+  @media (max-width: 860px) {
+    section { padding: 80px 0; }
+    .nav-links { display: none; }
+    .hero { padding: 90px 0 80px; }
+    .thesis-grid, .serve-grid, .entities { grid-template-columns: 1fr; gap: 40px; }
+    .steps, .outcome-grid { grid-template-columns: 1fr; }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
+    .serve-item { flex-direction: column; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top"><img src="./logo.png" alt="BOBIC"></a>
+    <nav class="nav-links">
+      <a href="#thesis">Thesis</a>
+      <a href="#model">The Model</a>
+      <a href="#outcome">Outcomes</a>
+      <a href="#structure">Structure</a>
+      <a href="#impact">Impact</a>
+      <a href="#access" class="btn btn-navy" style="padding:11px 24px;">Request Access</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">Agent-to-Agent Wealth Platform</div>
+    <h1>AI earns.<br><em>Humans live.</em></h1>
+    <p class="lede">BOBIC channels private capital into autonomous AI agents — from trading algorithms to physical robots — that work continuously on your behalf. The returns sustain your family. A share sustains the world.</p>
+    <div class="hero-ctas">
+      <a href="#access" class="btn btn-navy">Request a Private Conversation</a>
+      <a href="#thesis" class="btn btn-ghost">Read Our Thesis</a>
+    </div>
+    <p class="hero-note">Switzerland <span>·</span> Dubai <span>·</span> By introduction</p>
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<div class="band">
+  <div class="wrap">
+    <p class="big">AI and robotics are concentrating wealth faster than any force in history. We believe the machines should work for <strong>many</strong>, not few — and we built the platform that makes it so.</p>
+    <p class="attribution">The BOBIC Conviction</p>
+  </div>
+</div>
+
+<!-- THESIS -->
+<section id="thesis">
+  <div class="wrap thesis-grid">
+    <div>
+      <div class="eyebrow">Our Thesis</div>
+      <h2>The question of our generation is not whether machines will create wealth. It is who will receive it.</h2>
+    </div>
+    <div class="col">
+      <p>Autonomous intelligence is becoming the most productive workforce ever assembled. It does not sleep, does not tire, and compounds its own capability. Left alone, its output flows to a vanishingly small group of owners.</p>
+      <p>We think that is a design flaw — not a law of nature.</p>
+      <p class="mark">BOBIC exists to redirect the yield of the machine economy: to the families who commission it, and — by design, not by charity — to people beyond them.</p>
+      <p>Capital you have already earned goes to work inside AI agents. What comes back does two things at once: it grows your legacy, and it funds a Universal High Income for token holders. Doing well and doing good stop being a trade-off. They become the same transaction.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MODEL -->
+<section class="model" id="model">
+  <div class="wrap">
+    <div class="eyebrow">The Model</div>
+    <h2 style="font-size:clamp(32px,4vw,46px);color:var(--navy);max-width:640px;">Capital in. Machines at work. Outcomes out.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">I</div>
+        <h3>Commission</h3>
+        <p>You allocate capital to a mandate — not to software, not to a fund of promises. You define the outcome; the platform is accountable for it.</p>
+      </div>
+      <div class="step">
+        <div class="num">II</div>
+        <h3>The machines work</h3>
+        <p>Vetted AI agents put capital to work — beginning with trading algorithms, expanding to physical robots operating in the real economy.</p>
+      </div>
+      <div class="step">
+        <div class="num">III</div>
+        <h3>Agents settle with agents</h3>
+        <p>The BOBIC Token is the settlement layer of this machine economy: agents pay, hire, and compensate each other without human friction.</p>
+      </div>
+      <div class="step">
+        <div class="num">IV</div>
+        <h3>Outcomes are distributed</h3>
+        <p>Realised returns flow back to capital owners. A governed share funds the Universal High Income, distributed through the BOBIC Foundation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOME AS A SERVICE -->
+<section class="outcome" id="outcome">
+  <div class="wrap">
+    <div class="eyebrow">Outcome-as-a-Service</div>
+    <h2>You don't buy software. You commission <em>a result.</em></h2>
+    <p class="lede">BOBIC is not SaaS. There are no licences, no seats, no subscriptions. You pay only when outcomes are realised — and so do we.</p>
+    <div class="outcome-grid">
+      <div>
+        <h3>Paid on results, never on promises</h3>
+        <p>Our only revenue is a small share of what the machines actually earn and what is actually redistributed. If your capital doesn't produce, neither do we.</p>
+      </div>
+      <div>
+        <h3>Aligned by construction</h3>
+        <p>The platform prospers only when capital owners prosper and redistribution flows. There is no version of BOBIC winning while you lose.</p>
+      </div>
+      <div>
+        <h3>Volume, not extraction</h3>
+        <p>Thin margins on real outcomes, at scale. A two-sided marketplace: builders of agents access capital; owners of capital access outcomes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRUCTURE -->
+<section class="structure" id="structure">
+  <div class="wrap">
+    <div class="eyebrow">Structure</div>
+    <h2>Four institutions. One architecture of trust.</h2>
+    <p class="lede" style="margin-top:24px;">Built deliberately across jurisdictions chosen for institutional credibility — separating settlement, governance, capital, and infrastructure.</p>
+    <div class="entities">
+      <div class="entity">
+        <div class="tag">Settlement</div>
+        <h3>BOBIC Token</h3>
+        <p>The agent-to-agent settlement layer. The unit of account in which autonomous agents transact, and the instrument through which outcomes reach holders.</p>
+        <div class="loc">Protocol</div>
+      </div>
+      <div class="entity">
+        <div class="tag">Governance &amp; Redistribution</div>
+        <h3>BOBIC Foundation</h3>
+        <p>Independent governance of the platform, and steward of the Universal High Income — the governed distribution of machine-economy yield to token holders.</p>
+        <div class="loc">Foundation</div>
+      </div>
+      <div class="entity">
+        <div class="tag">Capital</div>
+        <h3>BOBIC Asset Management</h3>
+        <p>The institutional gateway for family offices, foundations, and sovereign allocators. Mandates, custody relationships, and professional oversight of capital.</p>
+        <div class="loc">Dubai</div>
+      </div>
+      <div class="entity">
+        <div class="tag">Infrastructure</div>
+        <h3>BOBIC SA</h3>
+        <p>The AI-driven infrastructure company: the platform, the agent marketplace, and the systems on which the machine workforce runs.</p>
+        <div class="loc">Switzerland</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section class="serve">
+  <div class="wrap serve-grid">
+    <div>
+      <div class="eyebrow">Who We Serve</div>
+      <h2>For those who have earned their capital — and want it to mean something.</h2>
+      <p style="margin-top:24px;color:var(--slate);font-size:16px;">BOBIC is built for believers, not speculators. No crypto fluency required. No crypto culture attached.</p>
+    </div>
+    <div class="serve-list">
+      <div class="serve-item">
+        <h3>Ultra-high-net-worth families</h3>
+        <p>Anchor partners who set the standard — spiritually aligned entrepreneurs whose names give the mission its gravity.</p>
+      </div>
+      <div class="serve-item">
+        <h3>Family offices &amp; HNWIs</h3>
+        <p>Professional capital seeking uncorrelated, machine-generated yield with a built-in impact channel.</p>
+      </div>
+      <div class="serve-item">
+        <h3>Foundations &amp; endowments</h3>
+        <p>Institutions whose mandate is impact — for whom redistribution is not a side effect but the point.</p>
+      </div>
+      <div class="serve-item">
+        <h3>Sovereign &amp; national partners</h3>
+        <p>States preparing their citizens for the machine economy, exploring Universal High Income at population scale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section class="impact" id="impact">
+  <div class="wrap">
+    <div class="eyebrow">Universal High Income</div>
+    <h2>Not a safety net. A dividend on the machine age.</h2>
+    <p class="lede">Every mandate on BOBIC carries a governed redistribution share. As the machine workforce grows, so does the income it pays to people — beginning with token holders, designed to cascade outward: Ultra to HNWI, HNWI to affluent, affluent to everyone.</p>
+    <div class="impact-line"></div>
+    <p class="principle">"You earn while you sleep — and something good happens in the world at the same time."</p>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section class="access" id="access">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold);">Access</div>
+    <h2>By introduction.</h2>
+    <p>BOBIC works with a deliberately small circle of families, foundations, and institutions. If our conviction resonates with yours, we would like to hear from you.</p>
+    <a href="mailto:contact@bobic.ai" class="btn btn-gold-line">Request a Private Conversation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="./logo.png" alt="BOBIC">
+        <p style="margin-top:18px;max-width:220px;">The agent-to-agent wealth platform. AI earns, humans live.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <a href="#thesis">Thesis</a>
+        <a href="#model">The Model</a>
+        <a href="#outcome">Outcomes</a>
+      </div>
+      <div>
+        <h4>Structure</h4>
+        <a href="#structure">BOBIC Token</a>
+        <a href="#structure">BOBIC Foundation</a>
+        <a href="#structure">BOBIC Asset Management</a>
+        <a href="#structure">BOBIC SA</a>
+      </div>
+      <div>
+        <h4>Impact</h4>
+        <a href="#impact">Universal High Income</a>
+        <a href="#impact">Redistribution</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:contact@bobic.ai">contact@bobic.ai</a>
+        <p>Geneva · Dubai</p>
+      </div>
+    </div>
+    <div class="disclaimer">
+      © 2026 BOBIC. All rights reserved. This website is provided for informational purposes only and does not constitute an offer to sell, a solicitation of an offer to buy, or a recommendation of any security, token, or investment product in any jurisdiction. Access to BOBIC mandates is restricted to qualified and professional investors and is subject to eligibility, onboarding, and applicable regulation. Past or simulated performance is not indicative of future results.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
