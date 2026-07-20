@@ -7,7 +7,7 @@
 <meta name="description" content="BOBIC is an agent-to-agent wealth platform. Capital is commissioned to AI agents; returns fund owners and a Universal High Income. Outcome-as-a-Service — you pay for results, never for software.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&family=Poppins:wght@200;300&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #0A2540;
@@ -58,7 +58,8 @@
     border-bottom: 1px solid var(--line);
   }
   .nav { display: flex; align-items: center; justify-content: space-between; height: 76px; }
-  .nav img { height: 34px; display: block; }
+  .logo-svg { display: block; width: auto; }
+  .nav .logo-svg { height: 40px; color: var(--navy); }
   .nav-links { display: flex; gap: 36px; align-items: center; }
   .nav-links a {
     font-size: 14px; color: var(--slate); text-decoration: none; font-weight: 500;
@@ -178,7 +179,7 @@
   /* ---------- Footer ---------- */
   footer { background: var(--navy-deep); color: rgba(255,255,255,0.55); padding: 72px 0 48px; font-size: 13px; }
   .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 56px; }
-  .foot-grid img { height: 28px; filter: brightness(0) invert(1); opacity: .85; }
+  .foot-grid .logo-svg { height: 30px; color: var(--white); opacity: .9; }
   .foot-grid h4 { color: var(--white); font-size: 13px; font-weight: 600; margin-bottom: 14px; letter-spacing: 0.06em; }
   .foot-grid p, .foot-grid a { color: rgba(255,255,255,0.5); text-decoration: none; display: block; margin-bottom: 8px; }
   .foot-grid a:hover { color: var(--gold); }
@@ -199,7 +200,15 @@
 
 <header>
   <div class="wrap nav">
-    <a href="#top"><img src="./logo.png" alt="BOBIC"></a>
+    <a href="#top" aria-label="BOBIC home"><svg class="logo-svg" viewBox="0 0 1280 386" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BOBIC Generational Wealth">
+      <g fill="none" stroke="currentColor" stroke-width="21" stroke-linejoin="round" stroke-linecap="round">
+        <circle cx="193" cy="193" r="176"/>
+        <path d="M 40.6 105 L 345.4 105 L 193 369 Z"/>
+        <path d="M 40.6 105 L 193 212 M 345.4 105 L 193 212 L 193 369"/>
+      </g>
+      <text x="430" y="252" font-family="Poppins, Inter, sans-serif" font-weight="200" font-size="238" fill="currentColor" textLength="800" lengthAdjust="spacingAndGlyphs">BOBIC</text>
+      <text x="432" y="350" font-family="Poppins, Inter, sans-serif" font-weight="300" font-size="72" fill="currentColor" textLength="798" lengthAdjust="spacingAndGlyphs">Generational Wealth</text>
+    </svg></a>
     <nav class="nav-links">
       <a href="#thesis">Thesis</a>
       <a href="#model">The Model</a>
@@ -391,7 +400,15 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <img src="./logo.png" alt="BOBIC">
+        <svg class="logo-svg" viewBox="0 0 1280 386" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BOBIC Generational Wealth">
+          <g fill="none" stroke="currentColor" stroke-width="21" stroke-linejoin="round" stroke-linecap="round">
+            <circle cx="193" cy="193" r="176"/>
+            <path d="M 40.6 105 L 345.4 105 L 193 369 Z"/>
+            <path d="M 40.6 105 L 193 212 M 345.4 105 L 193 212 L 193 369"/>
+          </g>
+          <text x="430" y="252" font-family="Poppins, Inter, sans-serif" font-weight="200" font-size="238" fill="currentColor" textLength="800" lengthAdjust="spacingAndGlyphs">BOBIC</text>
+          <text x="432" y="350" font-family="Poppins, Inter, sans-serif" font-weight="300" font-size="72" fill="currentColor" textLength="798" lengthAdjust="spacingAndGlyphs">Generational Wealth</text>
+        </svg>
         <p style="margin-top:18px;max-width:220px;">The agent-to-agent wealth platform. AI earns, humans live.</p>
       </div>
       <div>
