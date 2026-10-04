@@ -1,0 +1,13 @@
+{
+  "tool": "Built-in imagegen",
+  "assets": [
+    {
+      "path": "assets/wealth-network.jpg",
+      "prompt": "Use case: ads-marketing. Asset type: cinematic full-width hero background for BOBIC, a generational wealth and autonomous AI technology website. Create an aspirational, sophisticated photorealistic architectural panorama from a mountain terrace overlooking a prosperous futuristic-but-plausible city beside a lake, in the foothills of the Swiss Alps, at the edge of blue hour and golden sunset. Elegant glass towers and restrained warm windows evoke enduring wealth and human progress; subtle fine champagne-gold luminous connections run through the city like a delicate intelligent network, integrated naturally into the urban scene, not a HUD. Deep charcoal-black mountains and dark stone architectural foreground. Main city and warm light are on the right two thirds; left third dark uncluttered negative space for overlaid white editorial typography. Quiet confidence, possibility, timeless prosperity, technology serving humanity. Color palette black, deep muted evergreen, warm ivory and champagne gold, no saturated blue or neon magenta. Landscape 16:9, high detail, atmospheric depth, expensive editorial photography. No text, no logos, no coins, no money symbols, no robots, no charts, no people, no borders."
+    },
+    {
+      "path": "assets/intelligence-network.jpg",
+      "prompt": "Use case: ads-marketing. Asset type: website editorial technology background. An aspirational, sophisticated close-up photograph of a next-generation optical computing processor as a beautiful real physical object, dark brushed metal and smoked glass, delicate champagne-gold fiber-optic pathways radiating from a small luminous square chip and flowing in elegant arcs into a vast dark intelligent network. Technology that creates enduring wealth and human possibility. Cinematic depth of field, jewel-like precision, restrained luxury, very dark charcoal and deep evergreen shadows, champagne gold and ivory illumination. Landscape 16:9. Main luminous chip slightly right of centre in the right half, left third mostly dark negative space for white webpage copy. Understated and photorealistic, not a stock CGI circuit-board wallpaper. No text, no numbers, no logos, no currency symbols, no graphs, no blue or purple neon."
+    }
+  ]
+}
